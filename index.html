@@ -68,46 +68,6 @@
       margin-top: 2px;
     }
 
-    /* ========== BUTTONS ========== */
-    .btn-secondary-blue {
-      background: var(--secondary-blue);
-      color: var(--white);
-      border: none;
-      border-radius: 60px;
-      padding: 0.7rem 2.2rem;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.25s ease;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      white-space: nowrap;
-    }
-    .btn-secondary-blue:hover {
-      background: #0a56d4;
-      color: var(--white);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(26, 109, 255, 0.30);
-    }
-    .btn-outline-dark {
-      background: transparent;
-      border: 2px solid var(--primary-dark);
-      color: var(--primary-dark);
-      border-radius: 60px;
-      padding: 0.6rem 2rem;
-      font-weight: 600;
-      transition: 0.2s;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .btn-outline-dark:hover {
-      background: var(--primary-dark);
-      color: var(--white);
-    }
-
     /* ========== TYPOGRAPHY ========== */
     h2 {
       font-weight: 700;
@@ -166,21 +126,44 @@
     .footer {
       margin-top: 2.5rem;
       text-align: center;
+      border-top: 1px solid #eef2f6;
+      padding-top: 1.8rem;
+    }
+    .footer .copy {
       color: var(--gray);
       font-size: 0.9rem;
-      border-top: 1px solid #eef2f6;
-      padding-top: 2rem;
+      letter-spacing: 0.3px;
     }
-    .footer a { color: var(--secondary-blue); text-decoration: none; }
-    .footer a:hover { text-decoration: underline; }
+    .footer .website-link {
+      margin-top: 0.4rem;
+      font-size: 0.9rem;
+    }
+    .footer .website-link a {
+      color: var(--secondary-blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .footer .website-link a:hover {
+      text-decoration: underline;
+      color: #0a56d4;
+    }
+    .footer .made-with {
+      color: var(--gray);
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+    }
+    .footer .made-with i {
+      color: var(--accent-yellow);
+      margin: 0 4px;
+    }
 
     /* ========== RESPONSIVE ========== */
     @media (max-width: 575.98px) {
       body { padding: 1rem; }
       .privacy-card { padding: 1.5rem; }
-      .brand-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .brand-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
       .brand-title { font-size: 1.4rem; }
-      .btn-secondary-blue { width: 100%; justify-content: center; }
       h2 { font-size: 1.3rem; }
       .lead-text { font-size: 1rem; }
       .highlight-box { padding: 1rem; }
@@ -188,7 +171,6 @@
 
     @media (min-width: 576px) and (max-width: 767.98px) {
       .privacy-card { padding: 2rem; }
-      .brand-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
     }
 
     @media (min-width: 768px) and (max-width: 991.98px) {
@@ -215,11 +197,6 @@
         <i class="bi bi-book"></i>Khan Dictionary
       </div>
       <div class="brand-sub">Privacy Policy</div>
-    </div>
-    <div>
-      <a href="https://khansoftware.cc.cd" target="_blank" class="btn-secondary-blue">
-        <i class="bi bi-globe2"></i> Visit our website
-      </a>
     </div>
   </div>
 
@@ -284,28 +261,29 @@
   <!-- ===== SECTION 6 ===== -->
   <h2><i class="bi bi-envelope"></i> Contact</h2>
   <p>
-    For any questions or concerns regarding this privacy policy, please reach out through our official website:
+    If you have any questions or concerns regarding this privacy policy, please visit our website.
   </p>
-  <a href="https://khansoftware.cc.cd" target="_blank" class="btn-outline-dark mt-2">
-    <i class="bi bi-globe2"></i> khansoftware.cc.cd
-  </a>
 
   <hr class="section-divider" />
 
   <!-- ===== FOOTER ===== -->
   <div class="footer">
-    <p class="mb-1">
-      <i class="bi bi-shield-check" style="color:var(--accent-yellow);"></i>
-      Data is never stored permanently.
-    </p>
-    <p class="mb-0">
-      &copy; 2026 Khan Dictionary &middot; All rights reserved.
-    </p>
+    <div class="copy">
+      &copy; 2026 Khan Software. All rights reserved.
+    </div>
+    <div class="website-link">
+      <a href="https://khansoftware.cc.cd" target="_blank">
+        <i class="bi bi-globe2"></i> khansoftware.cc.cd
+      </a>
+    </div>
+    <div class="made-with">
+      <i class="bi bi-heart-fill"></i> Made with care
+    </div>
   </div>
 
 </div>
 
-<!-- Bootstrap JS (optional but included for completeness) -->
+<!-- Bootstrap JS (optional) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
