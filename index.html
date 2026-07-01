@@ -3,178 +3,309 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Dictionary Bot</title>
-  <!-- Bootstrap 5 + Icons -->
+  <title>Privacy Policy – Khan Dictionary</title>
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <!-- Google Fonts: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
   <style>
+    /* ========== CUSTOM PROPERTIES ========== */
+    :root {
+      --primary-dark: #0A0E1A;
+      --secondary-blue: #1A6DFF;
+      --accent-yellow: #F5A623;
+      --white: #FFFFFF;
+      --gray: #6B7280;
+    }
+
+    /* ========== RESET & BASE ========== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #f8fafc;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      background: #f4f6fa;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 2rem 1.5rem;
     }
+
+    /* ========== MAIN CARD ========== */
     .privacy-card {
-      background: #ffffff;
-      border-radius: 24px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 32px;
+      box-shadow: 0 30px 80px rgba(10, 14, 26, 0.08);
       padding: 2.5rem 3rem;
     }
-    h1, h2, h3 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
+
+    /* ========== HEADER ========== */
+    .brand-header {
+      background: var(--primary-dark);
+      border-radius: 20px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
     }
-    h1 { font-size: 2.4rem; }
-    h2 { font-size: 1.6rem; margin-top: 2rem; }
-    .text-muted-soft { color: #5e6f88; }
-    .border-bottom-light { border-bottom: 1px solid #e9edf2; }
-    .badge-legal {
-      background: #eef2f9;
-      color: #1a2634;
-      font-weight: 500;
-      padding: 0.4rem 1rem;
-      border-radius: 50px;
-      font-size: 0.8rem;
+    .brand-title {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: -0.03em;
+      margin: 0;
     }
-    .btn-outline-custom {
-      border-color: #1a2634;
-      color: #1a2634;
-      border-radius: 60px;
-      padding: 0.6rem 2rem;
-      font-weight: 500;
-      transition: 0.2s;
+    .brand-title i { color: var(--accent-yellow); margin-right: 10px; }
+    .brand-sub {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      font-weight: 400;
+      margin-top: 2px;
     }
-    .btn-outline-custom:hover {
-      background: #1a2634;
-      color: white;
-    }
-    .btn-primary-custom {
-      background: #1a2634;
+
+    /* ========== BUTTONS ========== */
+    .btn-secondary-blue {
+      background: var(--secondary-blue);
+      color: var(--white);
       border: none;
       border-radius: 60px;
-      padding: 0.7rem 2.5rem;
-      font-weight: 500;
-      transition: 0.2s;
-    }
-    .btn-primary-custom:hover {
-      background: #2c3e5a;
-      transform: translateY(-2px);
-    }
-    .section-divider {
-      margin: 2.5rem 0;
-      border-top: 1px solid #eef2f6;
-    }
-    .footer a {
-      color: #3b7cff;
+      padding: 0.7rem 2.2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.25s ease;
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
     }
+    .btn-secondary-blue:hover {
+      background: #0a56d4;
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26, 109, 255, 0.30);
+    }
+    .btn-outline-dark {
+      background: transparent;
+      border: 2px solid var(--primary-dark);
+      color: var(--primary-dark);
+      border-radius: 60px;
+      padding: 0.6rem 2rem;
+      font-weight: 600;
+      transition: 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-outline-dark:hover {
+      background: var(--primary-dark);
+      color: var(--white);
+    }
+
+    /* ========== TYPOGRAPHY ========== */
+    h2 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    h2 i { color: var(--secondary-blue); margin-right: 10px; }
+    .lead-text {
+      font-size: 1.1rem;
+      color: #2c3a4b;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+    .text-gray { color: var(--gray); }
+    .section-divider {
+      margin: 2.8rem 0;
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #e0e5ed, transparent);
+    }
+
+    /* ========== LISTS ========== */
+    .custom-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .custom-list li {
+      padding: 0.5rem 0 0.5rem 2rem;
+      position: relative;
+      line-height: 1.6;
+      color: #1f2a3a;
+    }
+    .custom-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--secondary-blue);
+      font-weight: 700;
+    }
+    .custom-list li strong { color: var(--primary-dark); }
+
+    /* ========== HIGHLIGHT BOX ========== */
+    .highlight-box {
+      background: #f0f7ff;
+      border-left: 6px solid var(--secondary-blue);
+      padding: 1.5rem 2rem;
+      border-radius: 16px;
+      margin: 1.8rem 0;
+    }
+    .highlight-box .bi { color: var(--accent-yellow); }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      margin-top: 2.5rem;
+      text-align: center;
+      color: var(--gray);
+      font-size: 0.9rem;
+      border-top: 1px solid #eef2f6;
+      padding-top: 2rem;
+    }
+    .footer a { color: var(--secondary-blue); text-decoration: none; }
     .footer a:hover { text-decoration: underline; }
-    @media (max-width: 768px) {
-      .privacy-card { padding: 1.8rem; }
-      h1 { font-size: 1.8rem; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 575.98px) {
+      body { padding: 1rem; }
+      .privacy-card { padding: 1.5rem; }
+      .brand-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .brand-title { font-size: 1.4rem; }
+      .btn-secondary-blue { width: 100%; justify-content: center; }
+      h2 { font-size: 1.3rem; }
+      .lead-text { font-size: 1rem; }
+      .highlight-box { padding: 1rem; }
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .privacy-card { padding: 2rem; }
+      .brand-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .privacy-card { padding: 2.2rem; }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      .privacy-card { padding: 2.5rem; }
+    }
+
+    @media (min-width: 1200px) {
+      .privacy-card { padding: 3rem; }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="privacy-card">
+<div class="privacy-card">
 
-      <!-- Header -->
-      <div class="d-flex flex-wrap align-items-center justify-content-between border-bottom-light pb-3 mb-4">
-        <div>
-          <span class="badge-legal"><i class="bi bi-shield-lock"></i> Privacy Policy</span>
-          <h1 class="mt-2 mb-0">Dictionary Bot</h1>
-          <p class="text-muted-soft">Last updated: July 2026</p>
-        </div>
-        <div>
-          <a href="https://khansoftware.cc.cd" target="_blank" class="btn btn-primary-custom">
-            <i class="bi bi-globe2 me-2"></i>Visit our website
-          </a>
-        </div>
+  <!-- ===== HEADER ===== -->
+  <div class="brand-header">
+    <div>
+      <div class="brand-title">
+        <i class="bi bi-book"></i>Khan Dictionary
       </div>
-
-      <!-- Introduction -->
-      <p class="lead" style="font-weight: 400; color: #2c3a4b;">
-        This Privacy Policy explains how <strong>Dictionary Bot</strong> (the “Bot”) handles your data. We are committed to transparency and protecting your privacy.
-      </p>
-
-      <!-- Section 1 -->
-      <h2><i class="bi bi-database me-2" style="color:#1a2634;"></i> Data We Collect</h2>
-      <p>To provide its core functionality, the Bot temporarily processes the following data:</p>
-      <ul class="list-unstyled ps-3">
-        <li class="mb-2"><i class="bi bi-chat-dots text-primary me-2"></i> <strong>Chat ID</strong> – used to route messages and store user preferences temporarily.</li>
-        <li class="mb-2"><i class="bi bi-search text-primary me-2"></i> <strong>Queried words</strong> – processed to fetch definitions, synonyms, examples, and pronunciation.</li>
-        <li class="mb-2"><i class="bi bi-star text-primary me-2"></i> <strong>Favorites & History</strong> – saved per user to provide a personalised experience.</li>
-        <li class="mb-2"><i class="bi bi-translate text-primary me-2"></i> <strong>Language preference</strong> – chosen via the <code>/language</code> command.</li>
-      </ul>
-
-      <!-- Section 2 -->
-      <h2><i class="bi bi-hdd-stack me-2" style="color:#1a2634;"></i> How We Store Data</h2>
-      <ul class="list-unstyled ps-3">
-        <li class="mb-2"><i class="bi bi-memory text-primary me-2"></i> All collected data is stored <strong>exclusively in memory (RAM)</strong>.</li>
-        <li class="mb-2"><i class="bi bi-cloud-slash text-primary me-2"></i> No data is written to any persistent database, file, or external storage.</li>
-        <li class="mb-2"><i class="bi bi-arrow-repeat text-primary me-2"></i> Data is automatically cleared upon bot restart or redeployment.</li>
-      </ul>
-
-      <!-- Section 3 -->
-      <h2><i class="bi bi-arrow-right-circle me-2" style="color:#1a2634;"></i> How We Use Data</h2>
-      <p>Your data is used solely to:</p>
-      <ul class="list-unstyled ps-3">
-        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Deliver accurate definitions, examples, and voice pronunciations.</li>
-        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Maintain your search history and favorites list for easy access.</li>
-        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Apply your preferred language settings (English-English, English-Persian, or Persian-English).</li>
-      </ul>
-
-      <!-- Section 4 -->
-      <h2><i class="bi bi-share me-2" style="color:#1a2634;"></i> Data Sharing & Third Parties</h2>
-      <p>
-        We <strong>do not</strong> sell, rent, or share your data with any third parties for marketing purposes.
-        The Bot relies on external APIs to function:
-      </p>
-      <ul class="list-unstyled ps-3">
-        <li class="mb-2"><i class="bi bi-box-arrow-up-right text-primary me-2"></i> <strong>Dictionary API</strong> – to fetch definitions and examples.</li>
-        <li class="mb-2"><i class="bi bi-box-arrow-up-right text-primary me-2"></i> <strong>MyMemory API</strong> – for translations (when using Persian modes).</li>
-        <li class="mb-2"><i class="bi bi-box-arrow-up-right text-primary me-2"></i> <strong>StreamElements TTS</strong> – for voice pronunciation.</li>
-      </ul>
-      <p class="mt-2">These services receive <em>only</em> the word you query – no personal identifiers are attached.</p>
-
-      <!-- Section 5 -->
-      <h2><i class="bi bi-person-check me-2" style="color:#1a2634;"></i> Your Rights & Control</h2>
-      <p>You have full control over your data:</p>
-      <ul class="list-unstyled ps-3">
-        <li class="mb-2"><i class="bi bi-trash text-danger me-2"></i> Clear your entire search history with <code>/clearhistory</code>.</li>
-        <li class="mb-2"><i class="bi bi-x-circle text-danger me-2"></i> Remove individual favorites using <code>/removefav</code>.</li>
-        <li class="mb-2"><i class="bi bi-download text-primary me-2"></i> No permanent storage means your data is never retained beyond the bot’s session.</li>
-      </ul>
-
-      <!-- Section 6 -->
-      <h2><i class="bi bi-envelope me-2" style="color:#1a2634;"></i> Contact</h2>
-      <p>
-        If you have any questions or concerns regarding this privacy policy, please contact us through our official website:
-      </p>
-      <a href="https://khansoftware.cc.cd" target="_blank" class="btn btn-outline-custom mt-2">
-        <i class="bi bi-globe2 me-2"></i> khansoftware.cc.cd
+      <div class="brand-sub">Privacy Policy</div>
+    </div>
+    <div>
+      <a href="https://khansoftware.cc.cd" target="_blank" class="btn-secondary-blue">
+        <i class="bi bi-globe2"></i> Visit our website
       </a>
-
-      <!-- Divider -->
-      <div class="section-divider"></div>
-
-      <!-- Footer -->
-      <div class="footer text-center text-muted-soft small">
-        <p class="mb-1">
-          <i class="bi bi-shield-check me-1"></i> Data is never stored permanently.
-        </p>
-        <p class="mb-0">
-          &copy; 2026 Dictionary Bot &middot; Hosted on <a href="https://github.com" target="_blank">GitHub</a>
-        </p>
-      </div>
-
     </div>
   </div>
 
-  <!-- Bootstrap JS (optional, but good for toggles) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ===== INTRO ===== -->
+  <p class="lead-text">
+    This Privacy Policy explains how <strong>Khan Dictionary</strong> (the “Bot”) handles your data.
+    We are committed to transparency and protecting your privacy.
+  </p>
+  <p class="text-gray" style="font-size:0.95rem;">
+    <i class="bi bi-calendar-event"></i> Last updated: July 2026
+  </p>
+
+  <!-- ===== SECTION 1 ===== -->
+  <h2><i class="bi bi-database"></i> Data We Collect</h2>
+  <p>To provide its core functionality, the Bot temporarily processes the following data:</p>
+  <ul class="custom-list">
+    <li><strong>Chat ID</strong> – used to route messages and store user preferences temporarily.</li>
+    <li><strong>Queried words</strong> – processed to fetch definitions, synonyms, examples, and pronunciation.</li>
+    <li><strong>Favorites &amp; History</strong> – saved per user to provide a personalised experience.</li>
+    <li><strong>Language preference</strong> – chosen via the <code>/language</code> command.</li>
+  </ul>
+
+  <!-- ===== SECTION 2 ===== -->
+  <h2><i class="bi bi-hdd-stack"></i> How We Store Data</h2>
+  <ul class="custom-list">
+    <li><strong>In‑memory only</strong> – all collected data resides exclusively in RAM.</li>
+    <li><strong>No persistent storage</strong> – no databases, files, or external logs are used.</li>
+    <li><strong>Auto‑clear</strong> – data is automatically discarded upon bot restart or redeployment.</li>
+  </ul>
+
+  <!-- ===== SECTION 3 ===== -->
+  <h2><i class="bi bi-arrow-right-circle"></i> How We Use Data</h2>
+  <ul class="custom-list">
+    <li>Deliver accurate definitions, examples, and voice pronunciations.</li>
+    <li>Maintain your search history and favorites list for easy access.</li>
+    <li>Apply your preferred language settings (English–English, English–Persian, or Persian–English).</li>
+  </ul>
+
+  <!-- ===== SECTION 4 ===== -->
+  <h2><i class="bi bi-share"></i> Data Sharing &amp; Third Parties</h2>
+  <p>
+    We <strong>do not</strong> sell, rent, or share your data with any third parties for marketing purposes.
+    The Bot relies on external APIs to function:
+  </p>
+  <ul class="custom-list">
+    <li><strong>Dictionary API</strong> – fetches definitions and examples.</li>
+    <li><strong>MyMemory API</strong> – provides translations (Persian modes).</li>
+    <li><strong>StreamElements TTS</strong> – generates voice pronunciation.</li>
+  </ul>
+  <div class="highlight-box">
+    <i class="bi bi-shield-check"></i> These services receive <em>only</em> the word you query – no personal identifiers are attached.
+  </div>
+
+  <!-- ===== SECTION 5 ===== -->
+  <h2><i class="bi bi-person-check"></i> Your Rights &amp; Control</h2>
+  <ul class="custom-list">
+    <li>Clear your entire search history with <code>/clearhistory</code>.</li>
+    <li>Remove individual favorites using <code>/removefav</code>.</li>
+    <li>No permanent storage – your data is never retained beyond the bot’s session.</li>
+  </ul>
+
+  <!-- ===== SECTION 6 ===== -->
+  <h2><i class="bi bi-envelope"></i> Contact</h2>
+  <p>
+    For any questions or concerns regarding this privacy policy, please reach out through our official website:
+  </p>
+  <a href="https://khansoftware.cc.cd" target="_blank" class="btn-outline-dark mt-2">
+    <i class="bi bi-globe2"></i> khansoftware.cc.cd
+  </a>
+
+  <hr class="section-divider" />
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">
+    <p class="mb-1">
+      <i class="bi bi-shield-check" style="color:var(--accent-yellow);"></i>
+      Data is never stored permanently.
+    </p>
+    <p class="mb-0">
+      &copy; 2026 Khan Dictionary &middot; All rights reserved.
+    </p>
+  </div>
+
+</div>
+
+<!-- Bootstrap JS (optional but included for completeness) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
