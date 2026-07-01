@@ -4,156 +4,177 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy – Dictionary Bot</title>
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-      background: #f5f7fb;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8fafc;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
-    .card {
-      max-width: 820px;
-      width: 100%;
+    .privacy-card {
       background: #ffffff;
-      border-radius: 28px;
-      padding: 40px 45px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+      padding: 2.5rem 3rem;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 1.6rem; margin-top: 2rem; }
+    .text-muted-soft { color: #5e6f88; }
+    .border-bottom-light { border-bottom: 1px solid #e9edf2; }
+    .badge-legal {
+      background: #eef2f9;
+      color: #1a2634;
+      font-weight: 500;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+    }
+    .btn-outline-custom {
+      border-color: #1a2634;
+      color: #1a2634;
+      border-radius: 60px;
+      padding: 0.6rem 2rem;
+      font-weight: 500;
       transition: 0.2s;
     }
-    h1 {
-      font-size: 30px;
-      font-weight: 700;
-      color: #1a2634;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 6px;
-    }
-    .sub {
-      font-size: 15px;
-      color: #5e6f88;
-      margin-bottom: 28px;
-      border-bottom: 1px solid #e9edf2;
-      padding-bottom: 18px;
-    }
-    h2 {
-      font-size: 20px;
-      font-weight: 600;
-      color: #1f2a3a;
-      margin: 26px 0 10px 0;
-    }
-    p, li {
-      font-size: 16px;
-      line-height: 1.7;
-      color: #2c3a4b;
-    }
-    ul {
-      padding-left: 24px;
-      margin: 10px 0 14px 0;
-    }
-    li { margin-bottom: 6px; }
-    .highlight {
-      background: #f0f4fe;
-      padding: 16px 20px;
-      border-radius: 12px;
-      border-left: 5px solid #3b7cff;
-      margin: 18px 0;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 18px;
+    .btn-outline-custom:hover {
       background: #1a2634;
       color: white;
-      padding: 12px 36px;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-      transition: 0.2s;
+    }
+    .btn-primary-custom {
+      background: #1a2634;
       border: none;
-      cursor: pointer;
+      border-radius: 60px;
+      padding: 0.7rem 2.5rem;
+      font-weight: 500;
+      transition: 0.2s;
     }
-    .btn:hover {
+    .btn-primary-custom:hover {
       background: #2c3e5a;
-      transform: scale(1.02);
+      transform: translateY(-2px);
     }
-    .footer {
-      margin-top: 32px;
-      font-size: 14px;
-      color: #7a8a9e;
-      border-top: 1px solid #e9edf2;
-      padding-top: 20px;
-      text-align: center;
+    .section-divider {
+      margin: 2.5rem 0;
+      border-top: 1px solid #eef2f6;
     }
     .footer a {
       color: #3b7cff;
       text-decoration: none;
     }
-    @media (max-width: 600px) {
-      .card { padding: 28px 20px; }
-      h1 { font-size: 24px; }
+    .footer a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+      .privacy-card { padding: 1.8rem; }
+      h1 { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🔐 Privacy Policy</h1>
-    <div class="sub">for <strong>Dictionary Bot</strong> · Last updated: July 2026</div>
 
-    <p>
-      This bot respects your privacy. We do not store any personal data permanently.
-      Below is a clear explanation of what data is collected and why.
-    </p>
+  <div class="container">
+    <div class="privacy-card">
 
-    <h2>📦 What data we collect</h2>
-    <ul>
-      <li><strong>Chat ID</strong> – used to send you messages and store your preferences temporarily.</li>
-      <li><strong>Words you search</strong> – stored in memory to show you your <em>history</em> and <em>favorites</em>.</li>
-      <li><strong>Language preference</strong> – chosen via the <code>/language</code> command.</li>
-      <li><strong>Favorites list</strong> – saved by you with <code>/addfav</code>.</li>
-    </ul>
+      <!-- Header -->
+      <div class="d-flex flex-wrap align-items-center justify-content-between border-bottom-light pb-3 mb-4">
+        <div>
+          <span class="badge-legal"><i class="bi bi-shield-lock"></i> Privacy Policy</span>
+          <h1 class="mt-2 mb-0">Dictionary Bot</h1>
+          <p class="text-muted-soft">Last updated: July 2026</p>
+        </div>
+        <div>
+          <a href="https://khansoftware.cc.cd" target="_blank" class="btn btn-primary-custom">
+            <i class="bi bi-globe2 me-2"></i>Visit our website
+          </a>
+        </div>
+      </div>
 
-    <h2>🧠 How we store it</h2>
-    <ul>
-      <li>All data is kept <strong>in memory only</strong> (RAM).</li>
-      <li>It is <strong>not</strong> written to any database or file.</li>
-      <li>Data <strong>resets</strong> every time the bot restarts or is redeployed.</li>
-    </ul>
+      <!-- Introduction -->
+      <p class="lead" style="font-weight: 400; color: #2c3a4b;">
+        This Privacy Policy explains how <strong>Dictionary Bot</strong> (the “Bot”) handles your data. We are committed to transparency and protecting your privacy.
+      </p>
 
-    <h2>🔁 How we use it</h2>
-    <ul>
-      <li>To provide dictionary definitions, synonyms, examples, and voice pronunciation.</li>
-      <li>To save your <em>favorites</em> and <em>search history</em> so you can access them later.</li>
-      <li>To apply your preferred language mode (English→English, English→Persian, or Persian→English).</li>
-    </ul>
+      <!-- Section 1 -->
+      <h2><i class="bi bi-database me-2" style="color:#1a2634;"></i> Data We Collect</h2>
+      <p>To provide its core functionality, the Bot temporarily processes the following data:</p>
+      <ul class="list-unstyled ps-3">
+        <li class="mb-2"><i class="bi bi-chat-dots text-primary me-2"></i> <strong>Chat ID</strong> – used to route messages and store user preferences temporarily.</li>
+        <li class="mb-2"><i class="bi bi-search text-primary me-2"></i> <strong>Queried words</strong> – processed to fetch definitions, synonyms, examples, and pronunciation.</li>
+        <li class="mb-2"><i class="bi bi-star text-primary me-2"></i> <strong>Favorites & History</strong> – saved per user to provide a personalised experience.</li>
+        <li class="mb-2"><i class="bi bi-translate text-primary me-2"></i> <strong>Language preference</strong> – chosen via the <code>/language</code> command.</li>
+      </ul>
 
-    <div class="highlight">
-      <strong>✅ We never share, sell, or transfer your data to third parties.</strong><br />
-      The only external APIs used are for dictionary lookup, translation, and text‑to‑speech – they receive only the word you query and nothing else.
-    </div>
+      <!-- Section 2 -->
+      <h2><i class="bi bi-hdd-stack me-2" style="color:#1a2634;"></i> How We Store Data</h2>
+      <ul class="list-unstyled ps-3">
+        <li class="mb-2"><i class="bi bi-memory text-primary me-2"></i> All collected data is stored <strong>exclusively in memory (RAM)</strong>.</li>
+        <li class="mb-2"><i class="bi bi-cloud-slash text-primary me-2"></i> No data is written to any persistent database, file, or external storage.</li>
+        <li class="mb-2"><i class="bi bi-arrow-repeat text-primary me-2"></i> Data is automatically cleared upon bot restart or redeployment.</li>
+      </ul>
 
-    <h2>🗑️ Your control</h2>
-    <ul>
-      <li>Clear your search history anytime with <code>/clearhistory</code>.</li>
-      <li>Remove individual favorites with <code>/removefav</code>.</li>
-    </ul>
+      <!-- Section 3 -->
+      <h2><i class="bi bi-arrow-right-circle me-2" style="color:#1a2634;"></i> How We Use Data</h2>
+      <p>Your data is used solely to:</p>
+      <ul class="list-unstyled ps-3">
+        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Deliver accurate definitions, examples, and voice pronunciations.</li>
+        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Maintain your search history and favorites list for easy access.</li>
+        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Apply your preferred language settings (English-English, English-Persian, or Persian-English).</li>
+      </ul>
 
-    <h2>📬 Contact</h2>
-    <p>
-      If you have any questions or concerns, feel free to reach out via our website.
-    </p>
+      <!-- Section 4 -->
+      <h2><i class="bi bi-share me-2" style="color:#1a2634;"></i> Data Sharing & Third Parties</h2>
+      <p>
+        We <strong>do not</strong> sell, rent, or share your data with any third parties for marketing purposes.
+        The Bot relies on external APIs to function:
+      </p>
+      <ul class="list-unstyled ps-3">
+        <li class="mb-2"><i class="bi bi-box-arrow-up-right text-primary me-2"></i> <strong>Dictionary API</strong> – to fetch definitions and examples.</li>
+        <li class="mb-2"><i class="bi bi-box-arrow-up-right text-primary me-2"></i> <strong>MyMemory API</strong> – for translations (when using Persian modes).</li>
+        <li class="mb-2"><i class="bi bi-box-arrow-up-right text-primary me-2"></i> <strong>StreamElements TTS</strong> – for voice pronunciation.</li>
+      </ul>
+      <p class="mt-2">These services receive <em>only</em> the word you query – no personal identifiers are attached.</p>
 
-    <!-- The button they requested -->
-    <a href="https://khansoftware.cc.cd" target="_blank" class="btn">🌐 Visit our website</a>
+      <!-- Section 5 -->
+      <h2><i class="bi bi-person-check me-2" style="color:#1a2634;"></i> Your Rights & Control</h2>
+      <p>You have full control over your data:</p>
+      <ul class="list-unstyled ps-3">
+        <li class="mb-2"><i class="bi bi-trash text-danger me-2"></i> Clear your entire search history with <code>/clearhistory</code>.</li>
+        <li class="mb-2"><i class="bi bi-x-circle text-danger me-2"></i> Remove individual favorites using <code>/removefav</code>.</li>
+        <li class="mb-2"><i class="bi bi-download text-primary me-2"></i> No permanent storage means your data is never retained beyond the bot’s session.</li>
+      </ul>
 
-    <div class="footer">
-      Made with ❤️ · Data is never stored permanently.<br />
-      Bot hosted on <a href="https://github.com" target="_blank">GitHub</a>.
+      <!-- Section 6 -->
+      <h2><i class="bi bi-envelope me-2" style="color:#1a2634;"></i> Contact</h2>
+      <p>
+        If you have any questions or concerns regarding this privacy policy, please contact us through our official website:
+      </p>
+      <a href="https://khansoftware.cc.cd" target="_blank" class="btn btn-outline-custom mt-2">
+        <i class="bi bi-globe2 me-2"></i> khansoftware.cc.cd
+      </a>
+
+      <!-- Divider -->
+      <div class="section-divider"></div>
+
+      <!-- Footer -->
+      <div class="footer text-center text-muted-soft small">
+        <p class="mb-1">
+          <i class="bi bi-shield-check me-1"></i> Data is never stored permanently.
+        </p>
+        <p class="mb-0">
+          &copy; 2026 Dictionary Bot &middot; Hosted on <a href="https://github.com" target="_blank">GitHub</a>
+        </p>
+      </div>
+
     </div>
   </div>
+
+  <!-- Bootstrap JS (optional, but good for toggles) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
