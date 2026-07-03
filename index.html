@@ -4,45 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy – Khan Dictionary</title>
-  <!-- Bootstrap 5 -->
+  <!-- Bootstrap 5 + Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
   <!-- Google Fonts: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
   <style>
-    /* ========== CUSTOM PROPERTIES ========== */
     :root {
       --primary-dark: #0A0E1A;
       --secondary-blue: #1A6DFF;
       --accent-yellow: #F5A623;
       --white: #FFFFFF;
       --gray: #6B7280;
+      --light-bg: #f4f6fa;
+      --card-shadow: 0 30px 80px rgba(10, 14, 26, 0.08);
+      --border-radius: 32px;
     }
 
-    /* ========== RESET & BASE ========== */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #f4f6fa;
+      background: var(--light-bg);
       min-height: 100vh;
       display: flex;
       align-items: center;
       padding: 2rem 1.5rem;
+      background-image: radial-gradient(circle at 10% 20%, rgba(26, 109, 255, 0.03) 0%, transparent 50%);
     }
 
-    /* ========== MAIN CARD ========== */
     .privacy-card {
       max-width: 960px;
       width: 100%;
       margin: 0 auto;
       background: var(--white);
-      border-radius: 32px;
-      box-shadow: 0 30px 80px rgba(10, 14, 26, 0.08);
+      border-radius: var(--border-radius);
+      box-shadow: var(--card-shadow);
       padding: 2.5rem 3rem;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(2px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .privacy-card:hover {
+      box-shadow: 0 40px 100px rgba(10, 14, 26, 0.12);
+      transform: translateY(-2px);
     }
 
-    /* ========== HEADER ========== */
+    /* Header */
     .brand-header {
       background: var(--primary-dark);
       border-radius: 20px;
@@ -52,6 +64,19 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-header::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(26, 109, 255, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
     }
     .brand-title {
       color: var(--white);
@@ -59,16 +84,23 @@
       font-size: 1.8rem;
       letter-spacing: -0.03em;
       margin: 0;
+      position: relative;
+      z-index: 1;
     }
-    .brand-title i { color: var(--accent-yellow); margin-right: 10px; }
+    .brand-title i {
+      color: var(--accent-yellow);
+      margin-right: 10px;
+    }
     .brand-sub {
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
       font-size: 0.9rem;
       font-weight: 400;
       margin-top: 2px;
+      position: relative;
+      z-index: 1;
     }
 
-    /* ========== TYPOGRAPHY ========== */
+    /* Typography */
     h2 {
       font-weight: 700;
       font-size: 1.5rem;
@@ -76,15 +108,23 @@
       margin-top: 2.2rem;
       margin-bottom: 1rem;
       letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
-    h2 i { color: var(--secondary-blue); margin-right: 10px; }
+    h2 i {
+      color: var(--secondary-blue);
+      font-size: 1.6rem;
+    }
     .lead-text {
       font-size: 1.1rem;
       color: #2c3a4b;
       font-weight: 400;
       line-height: 1.7;
     }
-    .text-gray { color: var(--gray); }
+    .text-gray {
+      color: var(--gray);
+    }
     .section-divider {
       margin: 2.8rem 0;
       border: 0;
@@ -92,7 +132,7 @@
       background: linear-gradient(to right, transparent, #e0e5ed, transparent);
     }
 
-    /* ========== LISTS ========== */
+    /* Lists */
     .custom-list {
       list-style: none;
       padding-left: 0;
@@ -110,19 +150,28 @@
       color: var(--secondary-blue);
       font-weight: 700;
     }
-    .custom-list li strong { color: var(--primary-dark); }
+    .custom-list li strong {
+      color: var(--primary-dark);
+    }
 
-    /* ========== HIGHLIGHT BOX ========== */
+    /* Highlight box */
     .highlight-box {
       background: #f0f7ff;
       border-left: 6px solid var(--secondary-blue);
       padding: 1.5rem 2rem;
       border-radius: 16px;
       margin: 1.8rem 0;
+      transition: background 0.2s;
     }
-    .highlight-box .bi { color: var(--accent-yellow); }
+    .highlight-box:hover {
+      background: #e6f0ff;
+    }
+    .highlight-box i {
+      color: var(--accent-yellow);
+      margin-right: 8px;
+    }
 
-    /* ========== FOOTER ========== */
+    /* Footer */
     .footer {
       margin-top: 2.5rem;
       text-align: center;
@@ -158,31 +207,56 @@
       margin: 0 4px;
     }
 
-    /* ========== RESPONSIVE ========== */
+    /* Responsive */
     @media (max-width: 575.98px) {
-      body { padding: 1rem; }
-      .privacy-card { padding: 1.5rem; }
-      .brand-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-      .brand-title { font-size: 1.4rem; }
-      h2 { font-size: 1.3rem; }
-      .lead-text { font-size: 1rem; }
-      .highlight-box { padding: 1rem; }
+      body {
+        padding: 1rem;
+      }
+      .privacy-card {
+        padding: 1.5rem;
+      }
+      .brand-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1.2rem 1.5rem;
+      }
+      .brand-title {
+        font-size: 1.4rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      .lead-text {
+        font-size: 1rem;
+      }
+      .highlight-box {
+        padding: 1rem;
+      }
     }
 
     @media (min-width: 576px) and (max-width: 767.98px) {
-      .privacy-card { padding: 2rem; }
+      .privacy-card {
+        padding: 2rem;
+      }
     }
 
     @media (min-width: 768px) and (max-width: 991.98px) {
-      .privacy-card { padding: 2.2rem; }
+      .privacy-card {
+        padding: 2.2rem;
+      }
     }
 
     @media (min-width: 992px) and (max-width: 1199.98px) {
-      .privacy-card { padding: 2.5rem; }
+      .privacy-card {
+        padding: 2.5rem;
+      }
     }
 
     @media (min-width: 1200px) {
-      .privacy-card { padding: 3rem; }
+      .privacy-card {
+        padding: 3rem;
+      }
     }
   </style>
 </head>
@@ -209,7 +283,7 @@
     <i class="bi bi-calendar-event"></i> Last updated: July 2026
   </p>
 
-  <!-- ===== SECTION 1 ===== -->
+  <!-- ===== SECTION 1: Data We Collect ===== -->
   <h2><i class="bi bi-database"></i> Data We Collect</h2>
   <p>To provide its core functionality, the Bot temporarily processes the following data:</p>
   <ul class="custom-list">
@@ -219,15 +293,19 @@
     <li><strong>Language preference</strong> – chosen via the <code>/language</code> command.</li>
   </ul>
 
-  <!-- ===== SECTION 2 ===== -->
+  <!-- ===== SECTION 2: How We Store Data (updated) ===== -->
   <h2><i class="bi bi-hdd-stack"></i> How We Store Data</h2>
   <ul class="custom-list">
     <li><strong>In‑memory only</strong> – all collected data resides exclusively in RAM.</li>
     <li><strong>No persistent storage</strong> – no databases, files, or external logs are used.</li>
     <li><strong>Auto‑clear</strong> – data is automatically discarded upon bot restart or redeployment.</li>
+    <li>
+      <strong>Automatic expiration</strong> – all stored data is automatically deleted after 24 hours,
+      ensuring that no information is retained longer than necessary.
+    </li>
   </ul>
 
-  <!-- ===== SECTION 3 ===== -->
+  <!-- ===== SECTION 3: How We Use Data ===== -->
   <h2><i class="bi bi-arrow-right-circle"></i> How We Use Data</h2>
   <ul class="custom-list">
     <li>Deliver accurate definitions, examples, and voice pronunciations.</li>
@@ -235,7 +313,7 @@
     <li>Apply your preferred language settings (English–English, English–Persian, or Persian–English).</li>
   </ul>
 
-  <!-- ===== SECTION 4 ===== -->
+  <!-- ===== SECTION 4: Data Sharing ===== -->
   <h2><i class="bi bi-share"></i> Data Sharing &amp; Third Parties</h2>
   <p>
     We <strong>do not</strong> sell, rent, or share your data with any third parties for marketing purposes.
@@ -250,19 +328,18 @@
     <i class="bi bi-shield-check"></i> These services receive <em>only</em> the word you query – no personal identifiers are attached.
   </div>
 
-  <!-- ===== SECTION 5 ===== -->
+  <!-- ===== SECTION 5: Your Rights ===== -->
   <h2><i class="bi bi-person-check"></i> Your Rights &amp; Control</h2>
   <ul class="custom-list">
     <li>Clear your entire search history with <code>/clearhistory</code>.</li>
     <li>Remove individual favorites using <code>/removefav</code>.</li>
-    <li>No permanent storage – your data is never retained beyond the bot’s session.</li>
+    <li>No permanent storage – your data is never retained beyond the bot’s session or the 24‑hour window.</li>
   </ul>
 
-  <!-- ===== SECTION 6 ===== -->
+  <!-- ===== SECTION 6: Contact ===== -->
   <h2><i class="bi bi-envelope"></i> Contact</h2>
   <p>
-    If you have any questions or concerns regarding this privacy policy, please visit
-    <a href="https://khansoftware.cc.cd" target="_blank" style="color:var(--secondary-blue); font-weight:600; text-decoration:none;">khansoftware</a>.
+    If you have any questions or concerns regarding this privacy policy, please visit our website.
   </p>
 
   <hr class="section-divider" />
@@ -284,7 +361,7 @@
 
 </div>
 
-<!-- Bootstrap JS (optional) -->
+<!-- Bootstrap JS (optional, for any toggles) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
